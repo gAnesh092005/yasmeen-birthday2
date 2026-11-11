@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#160d2b">
+<title>Happy Birthday Yasmeen!</title>
+<style>
+:root{--pink:#ff75b7;--gold:#ffd77a;--cream:#fff6f9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;overflow-x:hidden;color:var(--cream);font-family:Georgia,"Times New Roman",serif;background:radial-gradient(circle at 50% 10%,#49245f 0,#241238 42%,#10091d 100%)}
+body.lights-on{background:radial-gradient(circle at 50% 10%,#7b3e74 0,#422451 48%,#1c1230 100%)}
+.stars{position:fixed;inset:0;pointer-events:none;opacity:.65;background-image:radial-gradient(2px 2px at 20px 30px,#fff,transparent),radial-gradient(1px 1px at 90px 120px,#fff,transparent),radial-gradient(2px 2px at 180px 70px,#ffd9ee,transparent),radial-gradient(1px 1px at 260px 180px,#fff,transparent);background-size:300px 230px;animation:twinkle 5s infinite alternate}
+@keyframes twinkle{to{opacity:.25}}
+main{position:relative;z-index:1;max-width:950px;margin:auto;padding:34px 20px 90px;text-align:center}
+.tag{letter-spacing:5px;text-transform:uppercase;color:var(--gold);font:600 11px Arial,sans-serif}
+h1{font-size:clamp(2.7rem,9vw,5.5rem);line-height:1.02;margin:16px 0 10px;color:#fff;text-shadow:0 0 22px #ff75b788}
+h1 span{display:block;color:var(--pink);font-style:italic}
+.subtitle{font:15px Arial,sans-serif;color:#e9cfe7;letter-spacing:1px}
+.name{display:flex;justify-content:center;gap:clamp(4px,2vw,14px);margin:28px 0 5px;flex-wrap:wrap}
+.name b{font:700 clamp(1.8rem,7vw,3.5rem) Arial,sans-serif;color:var(--gold);text-shadow:0 4px 0 #a94c87,0 0 22px #ffd77a88;animation:bob 2s ease-in-out infinite}
+.name b:nth-child(2n){animation-delay:.2s}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.cake{font-size:76px;filter:drop-shadow(0 0 18px #ff9fc8);margin:16px 0}
+.panel{margin:34px auto 24px;padding:28px 24px;max-width:720px;border:1px solid #ffffff30;border-radius:24px;background:#ffffff0d;backdrop-filter:blur(8px);box-shadow:0 18px 60px #0003}
+.story{min-height:150px;display:grid;place-items:center}
+.story p{font-size:clamp(1.25rem,4vw,1.8rem);line-height:1.5;margin:0;color:#fff4fa}
+.story .small{font:13px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:15px}
+.controls{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:24px auto}
+button{border:1px solid #ffffff42;background:linear-gradient(135deg,#ff75b7,#bd65d6);color:white;padding:12px 17px;border-radius:999px;font:600 13px Arial,sans-serif;cursor:pointer;box-shadow:0 7px 20px #0003;transition:transform .2s}
+button:hover{transform:translateY(-3px)}button.secondary{background:#ffffff16}button.gold{background:linear-gradient(135deg,#f8c96b,#e68a9e);color:#351a39}
+.gallery-wrap{margin:56px auto 35px}
+.section-title{font-size:clamp(2rem,6vw,3rem);color:#ffd7e9;margin:0 0 10px}
+.section-sub{font:14px Arial,sans-serif;color:#d9bfdb;margin:0 0 28px}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:center}
+.photo-card{background:#fff8f0;color:#57364d;padding:12px 12px 18px;border-radius:5px;box-shadow:0 14px 35px #0006;transform:rotate(-2deg);transition:transform .35s}
+.photo-card:nth-child(2n){transform:rotate(2.5deg);background:#fff1f6}
+.photo-card:nth-child(3){transform:rotate(1.5deg)}
+.photo-card:hover{transform:translateY(-7px) rotate(0) scale(1.02)}
+.photo-card img{display:block;width:100%;height:310px;object-fit:cover;border-radius:2px}
+.photo-card figcaption{font:italic 17px Georgia,serif;padding:13px 4px 0}
+.slideshow{max-width:600px;margin:36px auto 0;padding:14px;background:#fff8f0;border-radius:8px;box-shadow:0 18px 45px #0006}
+.slide-frame{height:430px;overflow:hidden;background:#21152a}
+.slide-frame img{width:100%;height:100%;object-fit:contain;display:block;transition:opacity .4s}
+.slide-caption{color:#57364d;font:italic 17px Georgia,serif;padding:12px 5px 5px}
+.slide-controls{display:flex;justify-content:center;gap:12px;margin-top:14px}
+.slide-controls button{background:#6d3a73}
+.message{display:none;text-align:left;line-height:1.8;font-size:1.13rem;color:#fff3fa}
+.message.show{display:block;animation:fade .9s ease}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.signature{text-align:right;color:var(--gold);font-style:italic;margin-top:20px}
+.footer{font:12px Arial,sans-serif;color:#c7a9c9;margin-top:42px}
+.balloon{position:fixed;bottom:-150px;font-size:48px;z-index:0;animation:floatUp 9s linear forwards;pointer-events:none}
+@keyframes floatUp{to{transform:translateY(-120vh) rotate(15deg);opacity:0}}
+.confetti{position:fixed;top:-15px;width:8px;height:13px;z-index:4;pointer-events:none;animation:fall 4s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.8}}
+.candle-flame{display:inline-block;opacity:.25;transform:scale(.7);transition:.4s}.candle-flame.lit{opacity:1;transform:scale(1);filter:drop-shadow(0 0 12px #ffb12e)}
+@media(max-width:600px){main{padding:25px 15px 70px}.panel{padding:22px 17px}.gallery{grid-template-columns:1fr;gap:22px}.photo-card{max-width:420px;width:100%;margin:auto}.photo-card img{height:360px}.slide-frame{height:360px}.controls button{flex:1 1 42%;padding:12px 9px}}
+</style></head>
+<body><div class="stars"></div><main>
+<div class="tag">A little surprise made just for you</div>
+<h1>Happy Birthday <span>Yasmeen!</span></h1>
+<div class="subtitle">Today is all about celebrating YOU ✨</div>
+<div class="name" aria-label="Yasmeen"><b>Y</b><b>A</b><b>S</b><b>M</b><b>E</b><b>E</b><b>N</b></div>
+<div class="cake">🎂</div>
+<section class="panel story" aria-live="polite"><div><div class="small" id="stepLabel">A special day</div><p id="storyText">Some days are special… and today is extra special because it's your birthday! 💖</p></div></section>
+<div class="controls">
+<button onclick="nextStory()">Next surprise ✨</button><button class="secondary" onclick="toggleLights()">Turn on the lights 💡</button>
+<button class="secondary" onclick="playTune()">Play a birthday tune 🎵</button><button class="secondary" onclick="decorate()">Let's decorate 🎊</button>
+<button class="secondary" onclick="sendBalloons()">Fly with balloons 🎈</button><button class="gold" onclick="lightCandle()">Light the candle 🕯️</button>
+<button class="gold" onclick="revealMessage()">A message for you 💌</button>
+</div>
+<section class="gallery-wrap" id="memories">
+<div class="tag">Little moments, lovely memories</div><h2 class="section-title">Our Memory Gallery 💗</h2>
+<p class="section-sub">A few snapshots to make your birthday even more special.</p>
+<div class="gallery">
+<figure class="photo-card"><img src="images/memory-2.jpg" alt="A happy selfie together"><figcaption>Smiles make the best memories 😊</figcaption></figure>
+<figure class="photo-card"><img src="images/memory-3.jpg" alt="A black and white selfie"><figcaption>A little throwback in black and white 🌼</figcaption></figure>
+<figure class="photo-card"><img src="images/memory-4.jpg" alt="Another happy selfie"><figcaption>More memories, more reasons to smile 💕</figcaption></figure>
+<figure class="photo-card"><img src="images/memory-5.jpg" alt="A cheerful selfie together"><figcaption>One more lovely moment together 💗</figcaption></figure>
+<figure class="photo-card"><img src="images/memory-6.jpg" alt="Yasmeen in a pink saree"><figcaption>Pretty in pink 🌸</figcaption></figure>
+<figure class="photo-card"><img src="images/memory-7.jpg" alt="Yasmeen outdoors in a magenta saree"><figcaption>Keep shining, birthday girl ✨</figcaption></figure>
+</div>
+<div class="slideshow"><div class="slide-frame"><img id="slideImage" src="images/memory-2.jpg" alt="Birthday photo slideshow"></div><div class="slide-caption" id="slideCaption">A moment worth remembering ✨</div><div class="slide-controls"><button onclick="changeSlide(-1)">❮ Previous</button><button onclick="changeSlide(1)">Next ❯</button></div></div>
+</section>
+<section class="panel" id="cakePanel"><div style="font-size:64px">🎂 <span id="flame" class="candle-flame">🔥</span></div><p style="color:#f7d8eb;margin:8px 0 0">Make a wish, Yasmeen…</p></section>
+<section class="panel message" id="message"><div class="tag">From your friend, with lots of good wishes</div><h2 style="color:var(--gold);text-align:center">Dear Yasmeen 💗</h2>
+<p>Happy Birthday, Yasmeen! 🎉</p><p>Keep smiling always, keep shining, and never stop being the wonderful person you are. I hope this new year of your life brings you endless happiness, good health, success, and beautiful memories.</p>
+<p>Thank you for being such a special friend. May all your dreams come true, and may you always find a reason to smile. Enjoy every moment of your special day!</p><p style="text-align:center;font-size:1.4rem">Stay happy. Stay blessed. Keep shining! ✨</p><div class="signature">— Your friend ❤️</div></section>
+<div class="footer">Made with ❤️ especially for Yasmeen · Have the best birthday ever!</div>
+</main>
+<script>
+const lines=[["A special day","Some days are special… and today is extra special because it's your birthday! 💖"],["A little reminder","You deserve all the happiness, kindness, and wonderful surprises this world can offer. 🌷"],["Friendship","Thank you for the smiles, memories, and friendship. I'm lucky to have you as a friend. 🫶"],["Your dreams","Keep believing in yourself. Keep chasing your dreams, one beautiful step at a time. ✨"],["A wish for you","May this year bring new adventures, big achievements, and countless reasons to smile. 🌈"],["One last thing","Keep smiling always, Yasmeen. The world is brighter with your smile. Happy Birthday! 🎂"]];
+let step=0, audioCtx=null, slide=0;
+const photos=["images/memory-2.jpg","images/memory-3.jpg","images/memory-4.jpg","images/memory-5.jpg","images/memory-6.jpg","images/memory-7.jpg"];
+const captions=["Smiles make the best memories 😊","A little throwback in black and white 🌼","More memories, more reasons to smile 💕","One more lovely moment together 💗","Pretty in pink 🌸","Keep shining, birthday girl ✨"];
+function nextStory(){step=(step+1)%lines.length;document.getElementById('stepLabel').textContent=lines[step][0];document.getElementById('storyText').textContent=lines[step][1]}
+function toggleLights(){document.body.classList.toggle('lights-on')}
+function decorate(){for(let i=0;i<90;i++){let c=document.createElement('i');c.className='confetti';c.style.left=Math.random()*100+'vw';c.style.background=['#ff75b7','#ffd77a','#9be7ff','#c8ffb0','#fff'][i%5];c.style.animationDelay=Math.random()*1.5+'s';document.body.appendChild(c);setTimeout(()=>c.remove(),5500)}}
+function sendBalloons(){for(let i=0;i<12;i++){let b=document.createElement('div');b.className='balloon';b.textContent=['🎈','💗','🎈','💜'][i%4];b.style.left=Math.random()*95+'vw';b.style.animationDelay=Math.random()*2+'s';document.body.appendChild(b);setTimeout(()=>b.remove(),11000)}}
+function lightCandle(){document.getElementById('flame').classList.add('lit');decorate()}
+function revealMessage(){document.getElementById('message').classList.add('show');document.getElementById('message').scrollIntoView({behavior:'smooth',block:'center'})}
+function changeSlide(n){slide=(slide+n+photos.length)%photos.length;const im=document.getElementById('slideImage');im.style.opacity=0;setTimeout(()=>{im.src=photos[slide];im.style.opacity=1;document.getElementById('slideCaption').textContent=captions[slide]},180)}
+function playTune(){try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC){alert('Audio is not supported in this browser.');return}audioCtx=audioCtx||new AC();if(audioCtx.state==='suspended')audioCtx.resume();[523.25,523.25,587.33,523.25,698.46,659.25,523.25,523.25,587.33,523.25,783.99,698.46].forEach((f,i)=>{let o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(.0001,audioCtx.currentTime+i*.28);g.gain.exponentialRampToValueAtTime(.12,audioCtx.currentTime+i*.28+.03);g.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+i*.28+.23);o.connect(g);g.connect(audioCtx.destination);o.start(audioCtx.currentTime+i*.28);o.stop(audioCtx.currentTime+i*.28+.25)})}catch(e){alert('Tap again to enable sound in your browser.')}}
+</script></body></html>
